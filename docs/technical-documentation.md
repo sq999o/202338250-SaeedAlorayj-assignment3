@@ -13,3 +13,9 @@ The fetched list lives in memory. Changing language or sort order reuses it with
 ## Performance
 
 The page uses deferred scripts and two small local SVG images with explicit dimensions and native lazy loading. It renders repository entries together using one list replacement. No runtime library is required.
+
+## Verification
+
+- Chromium at a 390 px viewport passed controlled checks for retry after HTTP 503, missing language, an empty account, combined filtering and sorting, restored preferences, theme persistence, featured-project search, form validation and the visit timer. No horizontal overflow was detected at that width.
+- A separate request to the live GitHub endpoint returned five repositories. The local browser could not reach GitHub directly, so the successful rendering and retry checks used controlled API responses.
+- Local mobile Lighthouse performance score: 100/100. The external API was unavailable to the audit browser. This score describes the local page in that condition and may change on a public host.
