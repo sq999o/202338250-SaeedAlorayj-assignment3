@@ -16,6 +16,7 @@ Open http://localhost:8000. No build step, dependencies or API key are required.
 
 - Search for “Campus” under Projects to find the dashboard.
 - Under GitHub repositories, choose a language and sort by name. Refresh to restore both selections.
+- Expand “Time on this page” in the footer to see the elapsed time since navigation.
 - Switch the theme, refresh, and check that it stays selected.
 - Submit an empty contact form to focus the first invalid field. Valid input produces a local confirmation.
 

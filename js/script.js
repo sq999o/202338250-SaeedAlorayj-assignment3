@@ -1,4 +1,4 @@
-// Portfolio Assignment 2
+// Portfolio Assignment 3
 // Handles theme preferences, live project search, and contact form validation.
 
 const themeToggle = document.getElementById("theme-toggle");
@@ -189,4 +189,21 @@ contactForm.addEventListener("submit", function (event) {
     formMessage.classList.add("success");
 
     contactForm.reset();
+});
+// Update the visit timer only while its details are open.
+const visitDetails = document.querySelector("#visit-details");
+const visitTime = document.querySelector("#visit-time");
+let visitInterval;
+
+function showVisitTime() {
+    const seconds = Math.floor(performance.now() / 1000);
+    visitTime.textContent = Math.floor(seconds / 60) + " min " + (seconds % 60) + " sec";
+}
+
+visitDetails.addEventListener("toggle", () => {
+    clearInterval(visitInterval);
+    if (visitDetails.open) {
+        showVisitTime();
+        visitInterval = setInterval(showVisitTime, 1000);
+    }
 });
