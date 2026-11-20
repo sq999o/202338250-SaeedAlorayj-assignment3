@@ -1,0 +1,9 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+# AI evidence is submitted separately on Blackboard.
+*-ai-evidence.zip
+ai-evidence/
