@@ -750,3 +750,24 @@ body.dark-theme {
 .form-group textarea[aria-invalid="true"] {
     border-color: var(--error-color);
 }
+.repo-controls, #repo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 1rem;
+}
+
+.repo-controls label { display: grid; gap: .4rem; }
+.repo-controls select, #repo-list li {
+    padding: .8rem;
+    color: var(--text-color);
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: .6rem;
+}
+.repo-controls select { font: inherit; }
+#repo-status { margin: 1rem 0; }
+#repo-list { list-style: none; }
+#repo-list li { overflow-wrap: anywhere; }
+#repo-list a { color: var(--primary-color); font-weight: bold; }
+#repo-list p { margin: .4rem 0 0; }
+#repo-retry[hidden] { display: none; }

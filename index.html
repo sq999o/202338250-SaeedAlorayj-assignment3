@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
+    <script src="js/repositories.js" defer></script>
 </head>
 
 <body>
@@ -117,6 +118,7 @@
                     <article class="project-card">
 
                         <img
+                            loading="lazy" width="800" height="450"
                             src="assets/images/project1.svg"
                             alt="SocialBook project placeholder">
 
@@ -139,6 +141,7 @@
                     <article class="project-card">
 
                         <img
+                            loading="lazy" width="800" height="450"
                             src="assets/images/project2.svg"
                             alt="Campus Events Dashboard project placeholder">
 
@@ -162,6 +165,26 @@
 
         </section>
 
+
+        <section id="repositories" class="section alternate-section" aria-labelledby="repo-heading">
+            <div class="section-container">
+                <h2 id="repo-heading">GitHub repositories</h2>
+                <div class="repo-controls">
+                    <label>Language
+                        <select id="repo-language" disabled><option value="">All languages</option></select>
+                    </label>
+                    <label>Sort by
+                        <select id="repo-sort" disabled>
+                            <option value="updated">Recently updated</option>
+                            <option value="name">Name (A–Z)</option>
+                        </select>
+                    </label>
+                </div>
+                <p id="repo-status" role="status"></p>
+                <button id="repo-retry" class="btn secondary-btn" type="button" hidden>Try again</button>
+                <ul id="repo-list"></ul>
+            </div>
+        </section>
 
         <!-- Contact -->
         <section id="contact" class="section">
@@ -236,7 +259,7 @@
     <footer class="site-footer">
 
         <p>
-            &copy; 2026 Saeed Alorayj. Portfolio Assignment 2.
+            &copy; 2026 Saeed Alorayj. Portfolio Assignment 3.
         </p>
 
     </footer>
